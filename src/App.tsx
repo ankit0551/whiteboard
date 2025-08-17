@@ -88,7 +88,6 @@ export default function Whiteboard() {
   const getCtx = () => canvasRef.current?.getContext("2d");
 
   const startDraw = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    console.log("start draw")
     const rect = (e.target as HTMLCanvasElement).getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -143,22 +142,18 @@ export default function Whiteboard() {
 
 
   const endDrawUp = () => {
-    console.log("up")
     setIsDrawing(false);
     setLastPoint(null);
   };
   const endDrawCancel = () => {
-    console.log("cancle")
     setIsDrawing(false);
     setLastPoint(null);
   };
   const endDrawLeave = () => {
-    console.log("leave")
     setIsDrawing(false);
     setLastPoint(null);
   };
   const endDrawOut = () => {
-    console.log("out")
     setIsDrawing(false);
     setLastPoint(null);
   };
